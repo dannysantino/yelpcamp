@@ -143,17 +143,22 @@ app.use("/", userRoutes)
 // home page
 app.get("/", (req, res) => {
     res.render("home")
-})
+});
+
+app.get('/favicon.ico', (req, res) => {
+    res.status(204);
+    res.end();
+});
 
 app.all("*", (req, res, next) => {
     next(new Error("Page Not Found", 404))
-})
+});
 
 app.use((err, req, res, next) => {
     const { statusCode = 500 } = err;
     if (!err.message) err.message = "Something went wrong"
     res.status(statusCode).render("error", { err });
-})
+});
 
 const port = process.env.PORT || 8080
 app.listen(port, () => {
