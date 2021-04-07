@@ -1,0 +1,47 @@
+<% layout("layouts/boilerplate") %>
+    <div class="row">
+        <h1 class="text-center">New Campground</h1>
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form action="/campgrounds" method="POST" novalidate class="validated-form"
+                        enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="titleId" class="form-label">Title</label>
+                            <input type="text" class="form-control" name="campground[title]" id="titleId" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="locationId" class="form-label">Location</label>
+                            <input type="text" class="form-control" name="campground[location]" id="locationId"
+                                required>
+                        </div>
+                        <!-- <div class="mb-3">
+                    <label for="imageId" class="form-label">Image url</label>
+                    <input type="text" class="form-control" name="campground[image]" id="imageId" required>
+                </div> -->
+                        <div class="mb-3">
+                            <label for="priceId" class="form-label">Campground Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="price-label">$</span>
+                                <input type="text" class="form-control" name="campground[price]" id="priceId"
+                                    placeholder="0.00" aria-label="Price" aria-describedby="price-label" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imageId" class="form-label">Select image(s)</label>
+                            <input class="form-control" type="file" id="imageId" name="image" multiple>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descriptionId" class="form-label">Description</label>
+                            <textarea type="text" class="form-control" name="campground[description]" id="descriptionId"
+                                required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-success">Add Campground</button>
+                        </div>
+                    </form>
+                    <a href="/campgrounds">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
