@@ -1,0 +1,15 @@
+Apr.:
+- fixed image container issue on log in and register pages;
+
+Apr. 16:
+- fixed 'add campground' redirect issue;
+- blocked log in and register routes from logged-in user;
+- added logged-in username to flash messages;
+- changed isLoggedIn authentication message;
+- added log in and sign up links to sign up and login pages;
+
+Apr. 17:
+- added responsive functionality to details page
+
+Apr. 18:
+- adjusted display settings for h1 on home page

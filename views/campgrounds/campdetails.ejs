@@ -4,7 +4,7 @@
 
     <div class="row">
         <h1 class="text-center">Camp Details</h1>
-        <div class="col-6 mt-3 mb-3">
+        <div class="col-lg-6 mt-3 mb-3 order-2 order-lg-1">
             <div id="campCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <% foundCamp.images.forEach((img, i)=> { %>
@@ -25,9 +25,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                     <% } %>
-
             </div>
-
             <div class="card mb-5">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -60,7 +58,7 @@
             </div>
             <a href="/campgrounds">All Campgrounds</a>
         </div>
-        <div class="col-6 mt-3">
+        <div class="col-lg-6 mt-3 order-1 order-lg-2">
             <div class="mb-1" id='detail-map'></div>
             <% if (currentUser) { %>
                 <h4>Leave a Review</h4>

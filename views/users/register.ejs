@@ -1,6 +1,6 @@
 <% layout("layouts/boilerplate") %>
 
-    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="container justify-content-center align-items-center mt-3">
         <div class="row">
             <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
                 <div class="card shadow">
@@ -18,12 +18,15 @@
                                 <label for="emailId" class="form-label">Email</label>
                                 <input type="email" class="form-control" name="email" id="emailId" required>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-4">
                                 <label for="passwordId" class="form-label">Password</label>
                                 <input type="password" class="form-control" name="password" id="passwordId" required>
                             </div>
                             <button type="submit" class="btn btn-success w-100">Register</button>
                         </form>
+                        <div class="mt-4">
+                            <p>Already have an account? <a href="/login">Log in</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
